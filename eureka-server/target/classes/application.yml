@@ -1,0 +1,16 @@
+server:
+  port: 8033
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8033/eureka
+  server:
+    #关闭自我保护机制
+    enable-self-preservation: false
+    #每五秒检查一次对无效的服务剔除
+    eviction-interval-timer-in-ms: 5000
